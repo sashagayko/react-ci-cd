@@ -1,12 +1,12 @@
-name: main workflow
-on: workflow_dispatch
+name: Test React App
+on: push
 jobs:
-  print:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - name: Print to console
-        run: echo Hello!
-      - name: Print a few line
-        run: |
-          echo first line
-          echo second line
+      - name: Get the repo code
+        uses: actions/checkout@v3
+      - name: Install dependecies
+        run: npm ci
+      - name: Test app
+        run: npm run test
