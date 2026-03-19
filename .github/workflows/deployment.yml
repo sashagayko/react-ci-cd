@@ -4,7 +4,7 @@ on:
     branches:
       - main
     paths-ignore:
-      - '.githab/workflow/*'
+      - '.github/workflows/*'
 jobs:
   test:
     runs-on: ubuntu-latest
